@@ -13,7 +13,7 @@ int main(){
         cin >> my_data[i-1];
     }
 
-    merge_sort(my_data, 0, 10);
+    merge_sort(my_data, 0, 9);
     
     for(i = 0; i < 10; i++){
         cout <<  sorted[i] << " ";
