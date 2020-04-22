@@ -1,21 +1,33 @@
-#include "sorting.h"
+#include "calculator.h"
 
-int sorted[10];
+int a, b;
 
 int main(){
-    
-    int data[10]; 
+    char op;
 
-    for(int i=0; i<10; i++){ 
-        cin >> data[i]; 
-    } 
+    cout << "<Calculator>" << endl << "Please enter 2 integers and operator: ";
+    cin >> a >> op >> b;
 
-    merge_sort(data, 0, 9); 
+    switch(op){
+    case '+': 
+        addition();
+        break;
 
-    // 결과 확인 
-    for(int i=0; i<10; i++){ 
-        cout << data[i] << " "; 
-    } 
-    cout << endl;
-    return 0;
+    case '-': 
+        subtraction();
+        break;
+
+    case '*': 
+        multiplication();
+        break;
+
+    case '/': 
+        division();
+        break;
+
+    default: 
+        cerr << "Wrong operator!!! Exit the program..." << endl;
+        exit(0);
+        break;
+    }
 }
